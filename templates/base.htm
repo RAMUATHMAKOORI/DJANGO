@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SLDT</title>
+    
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+    <script  src="{% static 'https://code.jquery.com/jquery-3.4.1.js' %}"></script>
+	<script src="{% static 's.js' %}"></script>
+    <script src="{% static 'https://kit.fontawesome.com/a076d05399.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body bgcolor='#3cb371'> 
+  <font color="black"> 
+    <nav>
+      <ul>
+        <li class="logo">SLDT</li>
+		{% if user.is_authenticated %}
+        <li class="items"><a href="{% url 'add' %}">Add</a></li>
+        <li class="items"><a href="{% url 'stat' %}">stat</a></li>
+        <li class="items"><a href="{% url 'bill' %}">Bill</a></li>
+        <li class="items"><a href="{% url 'contact' %}">data</a></li>
+        <li class="items"><a href="{% url 'update' %}">update</a></li>
+        <li class="items"><a href="{% url 'Logout' %}">logout</a></li>
+		{% else %}
+		<li class="items"><a href="{% url 'home' %}">Home</a></li>
+        <li class="items"><a href="{% url 'bill' %}">Bill</a></li>
+        <li class="items"><a href="{% url 'services' %}">Pricing</a></li>
+		    <li class="items"><a href="{% url 'contact' %}">data</a></li>
+        <li class="items"><a href="{% url 'Login' %}">admin</a></li>
+		{% endif %}
+        <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+      </ul>
+    </nav>
+
+    <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script><center>
+	{% block content %}
+	
+	{% endblock %}
+  
+  
+	</center>
+  </body>
+  
+</html>

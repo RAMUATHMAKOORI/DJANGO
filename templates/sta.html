@@ -1,0 +1,14 @@
+{% extends 'base.htm' %}
+{% block content %}<br><br><table>
+    <tr><th>Date</th><th>Name</th><th>Bill Amount</th><th>Paid amount</th></tr>
+{% for a1 in a %} 
+
+    
+
+    
+    <tr><td>{{a1.date}}
+    </td><td><input type=text value={{a1.name}} readonly>
+    </td><td><input type=text value={{a1.total}} readonly></td>
+    <td><input type=text value={{a1.paid}} readonly></td></tr><br>
+</table>
+{% endfor %}{% endblock %}

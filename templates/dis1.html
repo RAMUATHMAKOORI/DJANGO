@@ -1,0 +1,98 @@
+{% extends 'base.htm' %}
+{% block content %}
+{% for a1 in a %} 
+<strong>Sri Laxmi Durga  Tenthouse</strong><br>Raghunadhapalem<br>
+  <form action ="bll1" method="POST">
+   {% csrf_token %} 
+పేరు  <input type=text name="name" value={{a1.name}}>&nbsp;
+తేదీ  <input type=date name="date" value={{b}}>
+<table>
+<tr>
+<th>Item</th>
+<th>No.of</th> 
+<th>cost</th>
+</tr>
+<tr><th>కుర్చీలు</th><td><input type=number name="t1" id="1" value={{a1.t1}} onkeyup="sum();"></td>
+          <td><input type=text name="t2" id="2" readonly></td></tr>
+<tr><th>బల్లలు</th><td><input type=number name="t3" id="3" value={{a1.t3}} onkeyup="sum();"></td>
+         <td> <input type=text name="t4" id="4" readonly></td>
+</tr>
+<tr><th>18x36 టెంట్ </th><td><input type=number name="t5" id="5" value={{a1.t5}} onkeyup="sum();"></td>
+          <td><input type=text name="t6" id="6" readonly></td></tr>
+<tr><th> 15x30 టెంట్ </th><td><input type=number name="t7" id="7" value={{a1.t7}} onkeyup="sum();"></td>
+          <td><input type=text name="t8" id="8" readonly></td></tr>
+<tr><th>12x24టెంట్ </th><td><input type=number name="t9" id="9" value={{a1.t9}} onkeyup="sum();"></td>
+          <td><input type=text name="t10" id="10" readonly></td></tr>
+<tr><th>9x18టెంట్ </th><td><input type=number name="t11" id="11" value={{a1.t11}} onkeyup="sum();"></td>
+          <td><input type=text name="t12" id="12" readonly></td></tr>	
+<tr><th>సైడ్ వాల్స్  </th><td><input type=number name="t13" id="13" value={{a1.t13}} onkeyup="sum();"></td>
+          <td><input type=text name="t14" id="14" readonly></td></tr>
+<tr><th>కార్పట్ </th><td><input type=number name="t15" id="15" value={{a1.t15}} onkeyup="sum();"></td>
+          <td><input type=text name="t16" id="16" readonly></td></tr>		  
+<tr><th>60కె జి గీన్నే </th><td><input type=number name="t17" id="17" value= {{a1.t17}} onkeyup="sum();"></td>
+          <td><input type=text name="t18" id="18" readonly></td></tr>	
+<tr><th>50కె జి గీన్నే </th><td><input type=number name="t19" id="19" value={{a1.t19}} onkeyup="sum();"></td>
+          <td><input type=text name="t20" id="20" readonly></td></tr>
+<tr><th>40కె జి గీన్నే </th><td><input type=number name="t21" id="21" value={{a1.t21}} onkeyup="sum();"></td>
+          <td><input type=text name="t22" id="22" readonly></td></tr>
+<tr><th>30కె జి గీన్నే </th><td><input type=number name="t23" id="23" value={{a1.t23}} onkeyup="sum();"></td>
+          <td><input type=text name="t24" id="24" readonly></td></tr>
+<tr><th>25కె జి గీన్నే </th><td><input type=number name="t25" id="25" value={{a1.t25}} onkeyup="sum();"></td>
+          <td><input type=text name="t26" id="26" readonly></td></tr>
+<tr><th>20కె జి గీన్నే </th><td><input type=number name="t27" id="27" value={{a1.t27}} onkeyup="sum();"></td>
+          <td><input type=text name="t28" id="28" readonly></td></tr>
+<tr><th>15కె జి గీన్నే </th><td><input type=number name="t29" id="29" value={{a1.t29}} onkeyup="sum();"></td>
+          <td><input type=text name="t30" id="30" readonly></td></tr>
+<tr><th>10కె జి గీన్నే </th><td><input type=number name="t31" id="31" value={{a1.t31}} onkeyup="sum();"></td>
+          <td><input type=text name="t32" id="32" readonly></td></tr>
+<tr><th>5కె జి గీన్నే </th><td><input type=number name="t33" id="33" value={{a1.t33}} onkeyup="sum();"></td>
+          <td><input type=text name="t34" id="34" readonly></td></tr>
+<tr><th>లగాన్ ( పెద్ద)</th><td><input type=number name="t35" id="35" value={{a1.t35}} onkeyup="sum();"></td>
+          <td><input type=text name="t36" id="36" readonly></td></tr>
+<tr><th>లగాన్ ( చిన్న) </th><td><input type=number name="t37" id="37" value={{a1.t37}} onkeyup="sum();"></td>
+          <td><input type=text name="t38" id="38" readonly></td></tr>
+<tr><th>బకెట్ </th><td><input type=number name="t39" id="39" value={{a1.t39}} onkeyup="sum();"></td>
+          <td><input type=text name="t40" id="40" readonly></td></tr>
+	<tr><th>బేషన్ </th><td><input type=number name="t41" id="41" value={{a1.t41}} onkeyup="sum();"></td>
+          <td><input type=text name="t42" id="42" readonly></td></tr>
+	<tr><th>జగ్ </th><td><input type=number name="t43" id="43" value={{a1.t43}} onkeyup="sum();"></td>
+          <td><input type=text name="t44" id="44" readonly></td></tr>
+	<tr><th>హస్తాలు </th><td><input type=number name="t45" id="45" value={{a1.t45}} onkeyup="sum();"></td>
+          <td><input type=text name="t46" id="46" readonly></td></tr>
+	<tr><th>కూర గంటెలు </th><td><input type=number name="t47" id="47" value={{a1.t47}} onkeyup="sum();"></td>
+          <td><input type=text name="t48" id="48" readonly></td></tr>
+	<tr><th>డోంగాలు </th><td><input type=number name="t49" id="49" value={{a1.t49}} onkeyup="sum();"></td>
+          <td><input type=text name="t50" id="50" readonly></td></tr>
+	<tr><th>కురిపి </th><td><input type=number name="t51" id="51" value={{a1.t51}} onkeyup="sum();"></td>
+          <td><input type=text name="t52" id="52" readonly></td></tr>
+	<tr><th>కాప్ గిరి</th><td><input type=number name="t53" id="53" value={{a1.t53}} onkeyup="sum();"></td>
+          <td><input type=text name="t54" id="54" readonly></td></tr>
+	<tr><th>డ్రమ్ములు  </th><td><input type=number name="t55" id="55" value={{a1.t55}} onkeyup="sum();"></td>
+          <td><input type=text name="t56" id="56" readonly></td></tr>
+	<tr><th>రింగ్ పోయిలు</th><td><input type=number name="t57" id="57" value={{a1.t57}} onkeyup="sum();"></td>
+          <td><input type=text name="t58" id="58" readonly></td></tr>
+	<tr><th>గ్యాస్ పొయిలు </th><td><input type=number name="t59" id="59" value={{a1.t59}} onkeyup="sum();"></td>
+          <td><input type=text name="t60" id="60" readonly></td></tr>
+
+    <tr><th>టీ ఫ్లాస్కో</th><td><input type=number name="t73" id="73" value={{a1.t73}} onkeyup="sum();"></td>
+          <td><input type=text name="t74" id="74" readonly></td></tr>
+	<tr><th>సింహాసనం </th><td><input type=number name="t61" id="61" value={{a1.t61}} onkeyup="sum();"></td>
+          <td><input type=text name="t62" id="62" readonly></td></tr>
+	<tr><th>కళాయి </th><td><input type=number name="t63" id="63" value={{a1.t63}} onkeyup="sum();"></td>
+          <td><input type=text name="t64" id="64" readonly></td></tr>
+	<tr><th>జల్లి గంటె </th><td><input type=number name="t65" id="65" value={{a1.t65}} onkeyup="sum();"></td>
+          <td><input type=text name="t66" id="66" readonly></td></tr>
+	<tr><th>పులిహార పళ్ళెం  </th><td><input type=number name="t67" id="67" value={{a1.t67}} onkeyup="sum();"></td>
+          <td><input type=text name="t68" id="68" readonly></td></tr>
+	<tr><th>కొబ్బరి తురుము </th><td><input type=number name="t69" id="69" value={{a1.t69}} onkeyup="sum();"></td>
+          <td><input type=text name="t70" id="70" readonly></td></tr>
+	<tr><th>స్టేజి బల్ల  4x4 </th><td><input type=number name="t71" id="71" value={{a1.t71}} onkeyup="sum();"></td>
+          <td><input type=text name="t72" id="72" readonly></td></tr>
+         
+	<tr><th>ట్రాన్స్ పోర్ట్ </th><td><input type=number name="t75" id="75" value={{a1.t75}} onkeyup="sum();"></td>
+          <td><input type=text name="t76" id="76" readonly></td></tr>
+		  
+<tr><td></td><th>
+total</th><td> <input type=text name="total" id="total" readonly ></td></tr>
+</table><br><button onclick="my()">Print </button>&nbsp; <input type="Submit"> </form>
+{% endfor %}{% endblock %}

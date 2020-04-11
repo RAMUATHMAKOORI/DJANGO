@@ -1,0 +1,25 @@
+{% extends 'base.htm' %}
+{% block content %}
+<br>
+<br>
+       <form action="cont" method="post">
+        {% csrf_token %}
+        పేరు  <input type="text" name="name" placeholder="username"><br>
+        తేదీ  <input type="date" name="date" ><br>
+             <input type="Submit"><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+          
+             
+            
+		{% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+    </div>
+    </form>
+
+{% endblock %}

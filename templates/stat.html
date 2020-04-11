@@ -1,0 +1,26 @@
+{% extends 'base.htm' %}
+{% block content %}
+<br>
+<br>
+       <form action="sta" method="POST">
+        {% csrf_token %}
+        
+        starting date  <input type="date" name="date" >&nbsp;
+          ending date  <input type="date" name="date1" >
+             <input type="Submit" value='search'><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+          
+             
+            
+		{% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+    </div>
+    </form>
+
+{% endblock %}

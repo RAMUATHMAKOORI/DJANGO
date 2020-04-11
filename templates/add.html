@@ -1,0 +1,28 @@
+{% extends 'base.htm' %}
+{% block content %}
+<br>
+<br>
+       <form action="st" method="post">
+        {% csrf_token %}
+        Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" ><br>
+        Date : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date" ><br>
+        paid amount :&nbsp;<input type="number" name="paid" ><br>
+
+
+             <input type="Submit"><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+          
+             
+            
+		{% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+    </div>
+    </form>
+
+{% endblock %}
