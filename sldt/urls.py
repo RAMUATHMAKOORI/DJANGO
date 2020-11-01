@@ -36,4 +36,6 @@ urlpatterns = [
     path('sta',views.sta,name='sta' ),
     path('st',views.st,name='st' ),
     path('add',views.add,name='add' ),
+    path('delete',views.delete,name='delete'),
+    path('delet',views.delet,name='delet'),
 ]
