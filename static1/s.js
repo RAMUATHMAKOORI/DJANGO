@@ -7,11 +7,10 @@ function openPage(pageName,elmnt,color) {
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
-    
+
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
 	}
-
 }
 function sum() {
  var txt1 = document.getElementById('1').value;
@@ -24,25 +23,25 @@ var txt2 = document.getElementById('3').value;
                 document.getElementById('4').value = result2;
             }
  var txt3 = document.getElementById('5').value;
-        var result3 = parseInt(txt3) * parseInt(600);
+        var result3 = parseInt(txt3) * parseInt(800);
             if (!isNaN(result3)) {
                 document.getElementById('6').value = result3;}
 var txt4 = document.getElementById('7').value;
-        var result4 = parseInt(txt4) * parseInt(400);
+        var result4 = parseInt(txt4) * parseInt(700);
             if (!isNaN(result4)) {
                 document.getElementById('8').value = result4;
             }
  var txt5 = document.getElementById('9').value;
-        var result5 = parseInt(txt5) * parseInt(300);
+        var result5 = parseInt(txt5) * parseInt(400);
             if (!isNaN(result5)) {
                 document.getElementById('10').value = result5;}
 var txt6 = document.getElementById('11').value;
-        var result6 = parseInt(txt6) * parseInt(200);
+        var result6 = parseInt(txt6) * parseInt(300);
             if (!isNaN(result6)) {
                 document.getElementById('12').value = result6;
             }
  var txt7 = document.getElementById('13').value;
-        var result7 = parseInt(txt7) * parseInt(50);
+        var result7 = parseInt(txt7) * parseInt(75);
             if (!isNaN(result7)) {
                 document.getElementById('14').value = result7;}
 var txt8 = document.getElementById('15').value;
@@ -141,11 +140,11 @@ var txt28 = document.getElementById('55').value;
                 document.getElementById('56').value = result28;
             }
  var txt29 = document.getElementById('57').value;
-        var result29 = parseInt(txt29) * parseInt(50);
+        var result29 = parseInt(txt29) * parseInt(75);
             if (!isNaN(result29)) {
                 document.getElementById('58').value = result29;}
 var txt30 = document.getElementById('59').value;
-        var result30 = parseInt(txt30) * parseInt(100);
+        var result30 = parseInt(txt30) * parseInt(150);
             if (!isNaN(result30)) {
                 document.getElementById('60').value = result30;
             }
@@ -176,8 +175,8 @@ var txt36 = document.getElementById('71').value;
             if (!isNaN(result36)) {
                 document.getElementById('72').value = result36;
             }
- 
-														
+
+
 var txt37 = document.getElementById('73').value;
         var result37 = parseInt(txt37) * parseInt(100);
             if (!isNaN(result37)) {
@@ -187,16 +186,18 @@ var txt38 = document.getElementById('75').value;
         var result38 = parseInt(txt38) * parseInt(100);
             if (!isNaN(result38)) {
                 document.getElementById('76').value = result38;
-            }														
+            }
      var res = parseInt(result1) + parseInt(result2)+parseInt(result3) + parseInt(result4)+parseInt(result5) + parseInt(result6)+parseInt(result7) + parseInt(result8)+parseInt(result9) + parseInt(result10)+parseInt(result11) + parseInt(result12)+parseInt(result13) + parseInt(result14)+parseInt(result15) + parseInt(result16)+parseInt(result17) + parseInt(result18)+parseInt(result19) + parseInt(result20)+parseInt(result21) + parseInt(result22)+parseInt(result23) + parseInt(result24)+parseInt(result25) + parseInt(result26)+parseInt(result27) + parseInt(result28)+parseInt(result29) + parseInt(result30)+parseInt(result31) + parseInt(result32)+parseInt(result33) + parseInt(result34)+parseInt(result35) + parseInt(result36) + parseInt(result37) + parseInt(result38);
-	    
+
 if (!isNaN(res)) {
                 document.getElementById('total').value = res;
-            }  
+            }
  }
  function my() {
  window.print();}
 // Get the element with id="defaultOpen" and click on it
 
 document.getElementById("defaultOpen").click();
+
+
 
