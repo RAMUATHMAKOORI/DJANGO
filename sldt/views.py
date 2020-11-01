@@ -303,3 +303,23 @@ def bll1(request):
             return redirect('contact')
         else:
             return redirect('bill')   
+        
+def delete(request):
+    if request.user.is_authenticated:
+        return render(request,'delete.html')
+    else:
+        messages.info(request,'Please login')
+        return redirect('login')
+    
+def delet(request):
+    if request.method =='POST':
+        if request.POST.get('name') and request.POST.get('date'):
+            s1=request.POST.get('name')
+            s2=request.POST.get('date')
+            Bill.objects.filter(name=s1).filter(date=s2).delete()
+            
+            messages.info(request,'Data Deleted')
+            return redirect('contact')
+        else:
+            messages.info(request,'Data Not Found')
+            return redirect('delete') 
